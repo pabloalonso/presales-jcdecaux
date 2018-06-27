@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel modelVersion="1.0" productVersion="7.7.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Projet">
+            <fields>
+                <field type="STRING" length="255" name="codification" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nomProjet" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="dateDebut" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="demandeur" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="piloteBE" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="cdp" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="responsableSC" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Configuration" fetchType="LAZY" name="configuration" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Configuration">
+            <fields>
+                <field type="INTEGER" length="255" name="quantite" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="code" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.company.model.SousEnsemble" fetchType="LAZY" name="sousensemble" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Budget" fetchType="LAZY" name="budget" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Budget">
+            <fields>
+                <field type="STRING" length="255" name="type" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="montant" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="version" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.SousEnsemble">
+            <fields>
+                <field type="STRING" length="255" name="etude" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="codification" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="sourcing" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

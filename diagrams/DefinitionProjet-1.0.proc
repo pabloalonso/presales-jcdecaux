@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+  <process:MainProcess xmi:id="_fIOOAHoNEeifB_MoQ_Nmdg" name="DefinitionProjet" author="Haris" bonitaVersion="7.7.0" bonitaModelVersion="7.6.0-002" configId="ACED0005740020446566696E6974696F6E50726F6A6574372E362E302D303032372E372E307370">
+    <elements xmi:type="process:Pool" xmi:id="_fIOOAXoNEeifB_MoQ_Nmdg" name="Projet" welcomePageInternal="false" basedOnLookAndFeel="Default Application">
+      <elements xmi:type="process:Lane" xmi:id="_fIOOAnoNEeifB_MoQ_Nmdg" name="Employé (lane)" actor="_fIOOVXoNEeifB_MoQ_Nmdg">
+        <elements xmi:type="process:StartEvent" xmi:id="_fIOOA3oNEeifB_MoQ_Nmdg" name="Démarrer" outgoing="_fIOOSXoNEeifB_MoQ_Nmdg">
+          <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_fIOOBHoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_fIOOBXoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_fIOOBnoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_fIOOB3oNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:Task" xmi:id="_fIOOCHoNEeifB_MoQ_Nmdg" name="Initialisation budget" outgoing="_fIOOTHoNEeifB_MoQ_Nmdg" incoming="_fIOOSXoNEeifB_MoQ_Nmdg" overrideActorsOfTheLane="false">
+          <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_fIOOCXoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_fIOOCnoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_fIOOC3oNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_fIOODHoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_q7SIN3oUEeifB_MoQ_Nmdg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_q7SIOHoUEeifB_MoQ_Nmdg" name="monProjet" content="monProjet" type="TYPE_VARIABLE" returnType="com.company.model.Projet">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_q7SIOXoUEeifB_MoQ_Nmdg" name="monProjet" dataType="_fIOObnoNEeifB_MoQ_Nmdg" className="com.company.model.Projet"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_q7SIOnoUEeifB_MoQ_Nmdg" name="monProjetInput.configuration" content="def configurationList = []&#xD;&#xA;//Uncomment line below to append existing configuration&#xD;&#xA;//configurationList.addAll(monProjet.configuration)&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;monProjetInput.configuration.each{&#xD;&#xA;&#x9;//Add aggregated Configuration instance&#xD;&#xA;&#x9;configurationList.add({ currentConfigurationInput ->&#xD;&#xA;&#x9;&#x9;def configurationVar = configurationDAO.findByPersistenceId(currentConfigurationInput.persistenceId.toLong())&#xD;&#xA;&#x9;&#x9;configurationVar.budget = {&#xD;&#xA;&#x9;&#x9;&#x9;def budgetList = []&#xD;&#xA;&#x9;&#x9;&#x9;//For each item collected in multiple input&#xD;&#xA;&#x9;&#x9;&#x9;currentConfigurationInput.budget.each{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//Add a new composed Budget instance&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;budgetList.add({ currentBudgetInput ->&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;def budgetVar = new com.company.model.Budget()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;budgetVar.type = currentBudgetInput.type&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;budgetVar.montant = currentBudgetInput.montant.toLong()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;budgetVar.version = currentBudgetInput.version&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;return budgetVar&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}(it))&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return budgetList}()&#xD;&#xA;&#x9;&#x9;return configurationVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return configurationList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_q7SIO3oUEeifB_MoQ_Nmdg" name="monProjetInput" type="COMPLEX"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_q7SIPHoUEeifB_MoQ_Nmdg" name="configurationDAO" content="configurationDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.ConfigurationDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_q7SIPXoUEeifB_MoQ_Nmdg" type="JAVA_METHOD" expression="setConfiguration">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_fIOODXoNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_fIOODnoNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_fIOOD3oNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_fIOOEHoNEeifB_MoQ_Nmdg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_fIOOEXoNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_fIOOEnoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <confirmationMessage xmi:type="expression:Expression" xmi:id="_fIOOE3oNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_fIOOFHoNEeifB_MoQ_Nmdg">
+            <targetForm xmi:type="expression:Expression" xmi:id="_fIOOFXoNEeifB_MoQ_Nmdg" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="_fIOOFnoNEeifB_MoQ_Nmdg">
+            <inputs xmi:type="process:ContractInput" xmi:id="_q7SIMHoUEeifB_MoQ_Nmdg" name="monProjetInput" type="COMPLEX">
+              <inputs xmi:type="process:ContractInput" xmi:id="_q7SIMXoUEeifB_MoQ_Nmdg" name="configuration" type="COMPLEX" multiple="true">
+                <inputs xmi:type="process:ContractInput" xmi:id="_q7SIMnoUEeifB_MoQ_Nmdg" name="persistenceId"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_q7SIM3oUEeifB_MoQ_Nmdg" name="budget" type="COMPLEX" multiple="true">
+                  <inputs xmi:type="process:ContractInput" xmi:id="_q7SINHoUEeifB_MoQ_Nmdg" name="type"/>
+                  <inputs xmi:type="process:ContractInput" xmi:id="_q7SINXoUEeifB_MoQ_Nmdg" name="montant"/>
+                  <inputs xmi:type="process:ContractInput" xmi:id="_q7SINnoUEeifB_MoQ_Nmdg" name="version"/>
+                </inputs>
+              </inputs>
+            </inputs>
+          </contract>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="_fIOOF3oNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:Task" xmi:id="_fIOOGHoNEeifB_MoQ_Nmdg" name="Planification" outgoing="_fIOOT3oNEeifB_MoQ_Nmdg" incoming="_fIOOTHoNEeifB_MoQ_Nmdg" overrideActorsOfTheLane="false">
+          <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_fIOOGXoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_fIOOGnoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_fIOOG3oNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_fIOOHHoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_xsD4dnoUEeifB_MoQ_Nmdg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_xsD4d3oUEeifB_MoQ_Nmdg" name="monProjet" content="monProjet" type="TYPE_VARIABLE" returnType="com.company.model.Projet">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_xsD4eHoUEeifB_MoQ_Nmdg" name="monProjet" dataType="_fIOObnoNEeifB_MoQ_Nmdg" className="com.company.model.Projet"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_xsD4eXoUEeifB_MoQ_Nmdg" name="monProjetInput.configuration" content="def configurationList = []&#xD;&#xA;//Uncomment line below to append existing configuration&#xD;&#xA;//configurationList.addAll(monProjet.configuration)&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;monProjetInput.configuration.each{&#xD;&#xA;&#x9;//Add aggregated Configuration instance&#xD;&#xA;&#x9;configurationList.add({ currentConfigurationInput ->&#xD;&#xA;&#x9;&#x9;def configurationVar = configurationDAO.findByPersistenceId(currentConfigurationInput.persistenceId.toLong())&#xD;&#xA;&#x9;&#x9;configurationVar.budget = {&#xD;&#xA;&#x9;&#x9;&#x9;def budgetList = []&#xD;&#xA;&#x9;&#x9;&#x9;//For each item collected in multiple input&#xD;&#xA;&#x9;&#x9;&#x9;currentConfigurationInput.budget.each{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//Add a new composed Budget instance&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;budgetList.add({ currentBudgetInput ->&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;def budgetVar = new com.company.model.Budget()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;budgetVar.type = currentBudgetInput.type&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;budgetVar.montant = currentBudgetInput.montant.toLong()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;budgetVar.version = currentBudgetInput.version&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;return budgetVar&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}(it))&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return budgetList}()&#xD;&#xA;&#x9;&#x9;return configurationVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return configurationList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_xsD4enoUEeifB_MoQ_Nmdg" name="monProjetInput" type="COMPLEX"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_xsD4e3oUEeifB_MoQ_Nmdg" name="configurationDAO" content="configurationDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.ConfigurationDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_xsD4fHoUEeifB_MoQ_Nmdg" type="JAVA_METHOD" expression="setConfiguration">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_fIOOHXoNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_fIOOHnoNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_fIOOH3oNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_fIOOIHoNEeifB_MoQ_Nmdg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_fIOOIXoNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_fIOOInoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <confirmationMessage xmi:type="expression:Expression" xmi:id="_fIOOI3oNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_fIOOJHoNEeifB_MoQ_Nmdg">
+            <targetForm xmi:type="expression:Expression" xmi:id="_fIOOJXoNEeifB_MoQ_Nmdg" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="_fIOOJnoNEeifB_MoQ_Nmdg">
+            <inputs xmi:type="process:ContractInput" xmi:id="_xsDRYHoUEeifB_MoQ_Nmdg" name="monProjetInput" type="COMPLEX">
+              <inputs xmi:type="process:ContractInput" xmi:id="_xsD4cHoUEeifB_MoQ_Nmdg" name="configuration" type="COMPLEX" multiple="true">
+                <inputs xmi:type="process:ContractInput" xmi:id="_xsD4cXoUEeifB_MoQ_Nmdg" name="persistenceId"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_xsD4cnoUEeifB_MoQ_Nmdg" name="budget" type="COMPLEX" multiple="true">
+                  <inputs xmi:type="process:ContractInput" xmi:id="_xsD4c3oUEeifB_MoQ_Nmdg" name="type"/>
+                  <inputs xmi:type="process:ContractInput" xmi:id="_xsD4dHoUEeifB_MoQ_Nmdg" name="montant"/>
+                  <inputs xmi:type="process:ContractInput" xmi:id="_xsD4dXoUEeifB_MoQ_Nmdg" name="version"/>
+                </inputs>
+              </inputs>
+            </inputs>
+          </contract>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="_fIOOJ3oNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:CallActivity" xmi:id="_fIOOKHoNEeifB_MoQ_Nmdg" name="Ordonnancement" outgoing="_fIOOUnoNEeifB_MoQ_Nmdg" incoming="_fIOOT3oNEeifB_MoQ_Nmdg">
+          <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_fIOOKXoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_fIOOKnoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_fIOOK3oNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_fIOOLHoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_fIOOLXoNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_fIOOLnoNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_fIOOL3oNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_fIOOMHoNEeifB_MoQ_Nmdg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_fIOOMXoNEeifB_MoQ_Nmdg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <calledActivityName xmi:type="expression:Expression" xmi:id="_fIOOMnoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_fIOOM3oNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:EndTerminatedEvent" xmi:id="_fIOONHoNEeifB_MoQ_Nmdg" name="Fin1" incoming="_fIOOUnoNEeifB_MoQ_Nmdg">
+          <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_fIOONXoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_fIOONnoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_fIOON3oNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_fIOOOHoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+        </elements>
+      </elements>
+      <resourceFolders xmi:type="process:ResourceFolder" xmi:id="_fvebQHoNEeifB_MoQ_Nmdg" path="_fIOOAXoNEeifB_MoQ_Nmdg/application/application"/>
+      <mandatorySymbol xmi:type="expression:Expression" xmi:id="_fIOOOnoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+      <mandatoryLabel xmi:type="expression:Expression" xmi:id="_fIOOO3oNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+      <errorTemplate xmi:type="process:AssociatedFile" xmi:id="_fIOOPHoNEeifB_MoQ_Nmdg" path="_GTUxAXoNEeifB_MoQ_Nmdg/html/error.html"/>
+      <processTemplate xmi:type="process:AssociatedFile" xmi:id="_fIOOPXoNEeifB_MoQ_Nmdg" path="_fIOOAXoNEeifB_MoQ_Nmdg/html/process.html"/>
+      <pageTemplate xmi:type="process:AssociatedFile" xmi:id="_fIOOPnoNEeifB_MoQ_Nmdg" path="_fIOOAXoNEeifB_MoQ_Nmdg/html/page.html"/>
+      <consultationTemplate xmi:type="process:AssociatedFile" xmi:id="_fIOOP3oNEeifB_MoQ_Nmdg" path="_fIOOAXoNEeifB_MoQ_Nmdg/html/consultation.html"/>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_MCek0HoQEeifB_MoQ_Nmdg" name="monProjet" dataType="_fIOObnoNEeifB_MoQ_Nmdg" className="com.company.model.Projet">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_V5WRcHoSEeifB_MoQ_Nmdg" name="initMonProjet()" content="def projetVar = new com.company.model.Projet()&#xD;&#xA;projetVar.codification = monProjetInput.codification&#xD;&#xA;projetVar.nomProjet = monProjetInput.nomProjet&#xD;&#xA;projetVar.dateDebut = monProjetInput.dateDebut&#xD;&#xA;projetVar.demandeur = monProjetInput.demandeur&#xD;&#xA;projetVar.piloteBE = monProjetInput.piloteBE&#xD;&#xA;projetVar.cdp = monProjetInput.cdp&#xD;&#xA;projetVar.responsableSC = monProjetInput.responsableSC&#xD;&#xA;projetVar.configuration = {&#xD;&#xA;&#x9;def configurationList = []&#xD;&#xA;&#x9;//For each item collected in multiple input&#xD;&#xA;&#x9;monProjetInput.configuration.each{&#xD;&#xA;&#x9;&#x9;//Add aggregated Configuration instance&#xD;&#xA;&#x9;&#x9;configurationList.add({ currentConfigurationInput ->&#xD;&#xA;&#x9;&#x9;&#x9;def configurationVar = configurationDAO.findByPersistenceId(currentConfigurationInput.persistenceId.toLong())&#xD;&#xA;&#x9;&#x9;&#x9;configurationVar.quantite = currentConfigurationInput.quantite&#xD;&#xA;&#x9;&#x9;&#x9;configurationVar.code = currentConfigurationInput.code&#xD;&#xA;&#x9;&#x9;&#x9;configurationVar.sousensemble = {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;def sousEnsembleList = []&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//For each item collected in multiple input&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;currentConfigurationInput.sousensemble.each{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//Add a new composed SousEnsemble instance&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;sousEnsembleList.add({ currentSousEnsembleInput ->&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;def sousEnsembleVar = new com.company.model.SousEnsemble()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sousEnsembleVar.etude = currentSousEnsembleInput.etude&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sousEnsembleVar.codification = currentSousEnsembleInput.codification&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sousEnsembleVar.sourcing = currentSousEnsembleInput.sourcing&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return sousEnsembleVar&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}(it))&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;return sousEnsembleList}()&#xD;&#xA;&#x9;&#x9;&#x9;return configurationVar&#xD;&#xA;&#x9;&#x9;}(it))&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return configurationList}()&#xD;&#xA;return projetVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Projet">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_V5WRcXoSEeifB_MoQ_Nmdg" name="monProjetInput" type="COMPLEX"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_V5WRcnoSEeifB_MoQ_Nmdg" name="configurationDAO" content="configurationDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.ConfigurationDAO" returnTypeFixed="true"/>
+        </defaultValue>
+      </data>
+      <confirmationTemplate xmi:type="process:AssociatedFile" xmi:id="_fIOOQHoNEeifB_MoQ_Nmdg" path="_fIOOAXoNEeifB_MoQ_Nmdg/html/_fIOOAXoNEeifB_MoQ_Nmdgconfirmation.html"/>
+      <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_fIOOQXoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+      <confirmationMessage xmi:type="expression:Expression" xmi:id="_fIOOQnoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_fIOOQ3oNEeifB_MoQ_Nmdg">
+        <targetForm xmi:type="expression:Expression" xmi:id="_YgNl8HoSEeifB_MoQ_Nmdg" name="demandeProjet" content="b1230664-14ad-421d-9028-826b587dbc40" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </formMapping>
+      <recapPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_fIOORXoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_fIOORnoNEeifB_MoQ_Nmdg">
+        <targetForm xmi:type="expression:Expression" xmi:id="_fIOOR3oNEeifB_MoQ_Nmdg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </overviewFormMapping>
+      <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_fIOOSHoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_fIOOSXoNEeifB_MoQ_Nmdg" target="_fIOOCHoNEeifB_MoQ_Nmdg" source="_fIOOA3oNEeifB_MoQ_Nmdg">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_fIOOSnoNEeifB_MoQ_Nmdg"/>
+        <condition xmi:type="expression:Expression" xmi:id="_fIOOS3oNEeifB_MoQ_Nmdg" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_fIOOTHoNEeifB_MoQ_Nmdg" target="_fIOOGHoNEeifB_MoQ_Nmdg" source="_fIOOCHoNEeifB_MoQ_Nmdg">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_fIOOTXoNEeifB_MoQ_Nmdg"/>
+        <condition xmi:type="expression:Expression" xmi:id="_fIOOTnoNEeifB_MoQ_Nmdg" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_fIOOT3oNEeifB_MoQ_Nmdg" target="_fIOOKHoNEeifB_MoQ_Nmdg" source="_fIOOGHoNEeifB_MoQ_Nmdg">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_fIOOUHoNEeifB_MoQ_Nmdg"/>
+        <condition xmi:type="expression:Expression" xmi:id="_fIOOUXoNEeifB_MoQ_Nmdg" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_fIOOUnoNEeifB_MoQ_Nmdg" target="_fIOONHoNEeifB_MoQ_Nmdg" source="_fIOOKHoNEeifB_MoQ_Nmdg">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_fIOOU3oNEeifB_MoQ_Nmdg"/>
+        <condition xmi:type="expression:Expression" xmi:id="_fIOOVHoNEeifB_MoQ_Nmdg" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <actors xmi:type="process:Actor" xmi:id="_fIOOVXoNEeifB_MoQ_Nmdg" documentation="Ceci est un exemple d'acteur associé à tous les utilisateurs d'ACME" name="Employee actor" initiator="true"/>
+      <contract xmi:type="process:Contract" xmi:id="_fIOOVnoNEeifB_MoQ_Nmdg">
+        <inputs xmi:type="process:ContractInput" xmi:id="_V5WRYHoSEeifB_MoQ_Nmdg" name="monProjetInput" type="COMPLEX">
+          <inputs xmi:type="process:ContractInput" xmi:id="_V5WRYXoSEeifB_MoQ_Nmdg" name="codification"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_V5WRYnoSEeifB_MoQ_Nmdg" name="nomProjet"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_V5WRY3oSEeifB_MoQ_Nmdg" name="dateDebut" type="LOCALDATE"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_V5WRZHoSEeifB_MoQ_Nmdg" name="demandeur"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_V5WRZXoSEeifB_MoQ_Nmdg" name="piloteBE"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_V5WRZnoSEeifB_MoQ_Nmdg" name="cdp"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_V5WRZ3oSEeifB_MoQ_Nmdg" name="responsableSC"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_V5WRaHoSEeifB_MoQ_Nmdg" name="configuration" type="COMPLEX" multiple="true">
+            <inputs xmi:type="process:ContractInput" xmi:id="_V5WRaXoSEeifB_MoQ_Nmdg" name="persistenceId"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_V5WRanoSEeifB_MoQ_Nmdg" name="quantite" type="INTEGER"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_V5WRa3oSEeifB_MoQ_Nmdg" name="code"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_V5WRbHoSEeifB_MoQ_Nmdg" name="sousensemble" type="COMPLEX" multiple="true">
+              <inputs xmi:type="process:ContractInput" xmi:id="_V5WRbXoSEeifB_MoQ_Nmdg" name="etude"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_V5WRbnoSEeifB_MoQ_Nmdg" name="codification"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_V5WRb3oSEeifB_MoQ_Nmdg" name="sourcing"/>
+            </inputs>
+          </inputs>
+        </inputs>
+      </contract>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_fIOOV3oNEeifB_MoQ_Nmdg">
+        <name xmi:type="expression:Expression" xmi:id="_fIOOWHoNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_fIOOWXoNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_fIOOWnoNEeifB_MoQ_Nmdg">
+        <name xmi:type="expression:Expression" xmi:id="_fIOOW3oNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_fIOOXHoNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_fIOOXXoNEeifB_MoQ_Nmdg">
+        <name xmi:type="expression:Expression" xmi:id="_fIOOXnoNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_fIOOX3oNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_fIOOYHoNEeifB_MoQ_Nmdg">
+        <name xmi:type="expression:Expression" xmi:id="_fIOOYXoNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_fIOOYnoNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_fIOOY3oNEeifB_MoQ_Nmdg">
+        <name xmi:type="expression:Expression" xmi:id="_fIOOZHoNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_fIOOZXoNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+    </elements>
+    <datatypes xmi:type="process:BooleanType" xmi:id="_fIOOZnoNEeifB_MoQ_Nmdg" name="Boolean"/>
+    <datatypes xmi:type="process:DateType" xmi:id="_fIOOZ3oNEeifB_MoQ_Nmdg" name="Date"/>
+    <datatypes xmi:type="process:IntegerType" xmi:id="_fIOOaHoNEeifB_MoQ_Nmdg" name="Integer"/>
+    <datatypes xmi:type="process:LongType" xmi:id="_fIOOaXoNEeifB_MoQ_Nmdg" name="Long"/>
+    <datatypes xmi:type="process:DoubleType" xmi:id="_fIOOanoNEeifB_MoQ_Nmdg" name="Double"/>
+    <datatypes xmi:type="process:StringType" xmi:id="_fIOOa3oNEeifB_MoQ_Nmdg" name="Text"/>
+    <datatypes xmi:type="process:JavaType" xmi:id="_fIOObHoNEeifB_MoQ_Nmdg" name="Java_object"/>
+    <datatypes xmi:type="process:XMLType" xmi:id="_fIOObXoNEeifB_MoQ_Nmdg" name="XML"/>
+    <datatypes xmi:type="process:BusinessObjectType" xmi:id="_fIOObnoNEeifB_MoQ_Nmdg" name="Business_Object"/>
+  </process:MainProcess>
+  <notation:Diagram xmi:id="_fIOOb3oNEeifB_MoQ_Nmdg" type="Process" element="_fIOOAHoNEeifB_MoQ_Nmdg" name="MonDiagramme" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_fIOOcHoNEeifB_MoQ_Nmdg" type="2007" element="_fIOOAXoNEeifB_MoQ_Nmdg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_fIOOcXoNEeifB_MoQ_Nmdg" type="5008"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_fIOOcnoNEeifB_MoQ_Nmdg" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_fIOOc3oNEeifB_MoQ_Nmdg" type="3007" element="_fIOOAnoNEeifB_MoQ_Nmdg">
+          <children xmi:type="notation:DecorationNode" xmi:id="_fIOOdHoNEeifB_MoQ_Nmdg" type="5007"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_fIOOdXoNEeifB_MoQ_Nmdg" type="7002">
+            <children xmi:type="notation:Shape" xmi:id="_fIOOdnoNEeifB_MoQ_Nmdg" type="3005" element="_fIOOCHoNEeifB_MoQ_Nmdg" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_fIOOd3oNEeifB_MoQ_Nmdg" type="5005"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fIOOeHoNEeifB_MoQ_Nmdg" x="160" y="60" width="120" height="60"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_fIOOeXoNEeifB_MoQ_Nmdg" type="3002" element="_fIOOA3oNEeifB_MoQ_Nmdg" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_fIOOenoNEeifB_MoQ_Nmdg" type="5024">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_fIOOe3oNEeifB_MoQ_Nmdg" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fIOOfHoNEeifB_MoQ_Nmdg" x="60" y="68"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_fIOOfXoNEeifB_MoQ_Nmdg" type="3005" element="_fIOOGHoNEeifB_MoQ_Nmdg" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_fIOOfnoNEeifB_MoQ_Nmdg" type="5005"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fIOOf3oNEeifB_MoQ_Nmdg" x="366" y="60" width="119" height="59"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_fIOOgHoNEeifB_MoQ_Nmdg" type="3063" element="_fIOOKHoNEeifB_MoQ_Nmdg" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_fIOOgXoNEeifB_MoQ_Nmdg" type="5093"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fIOOgnoNEeifB_MoQ_Nmdg" x="575" y="45" width="152" height="75"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_fIOOg3oNEeifB_MoQ_Nmdg" type="3062" element="_fIOONHoNEeifB_MoQ_Nmdg" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_fIOOhHoNEeifB_MoQ_Nmdg" type="5090">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_fIOOhXoNEeifB_MoQ_Nmdg" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fIO1EHoNEeifB_MoQ_Nmdg" x="803" y="68"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_fIO1EXoNEeifB_MoQ_Nmdg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fIO1EnoNEeifB_MoQ_Nmdg" fontName="Segoe UI"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_fIO1E3oNEeifB_MoQ_Nmdg"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_fIO1FHoNEeifB_MoQ_Nmdg"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fIO1FXoNEeifB_MoQ_Nmdg"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_fIO1FnoNEeifB_MoQ_Nmdg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_fIO1F3oNEeifB_MoQ_Nmdg" fontName="Segoe UI"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_fIO1GHoNEeifB_MoQ_Nmdg"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_fIO1GXoNEeifB_MoQ_Nmdg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fIO1GnoNEeifB_MoQ_Nmdg" width="1680" height="250"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_fIO1G3oNEeifB_MoQ_Nmdg"/>
+    <edges xmi:type="notation:Connector" xmi:id="_fIO1HHoNEeifB_MoQ_Nmdg" type="4001" element="_fIOOSXoNEeifB_MoQ_Nmdg" source="_fIOOeXoNEeifB_MoQ_Nmdg" target="_fIOOdnoNEeifB_MoQ_Nmdg" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_fIO1HXoNEeifB_MoQ_Nmdg" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_fIO1HnoNEeifB_MoQ_Nmdg" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_fIO1H3oNEeifB_MoQ_Nmdg" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fIO1IHoNEeifB_MoQ_Nmdg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_fIO1IXoNEeifB_MoQ_Nmdg" type="4001" element="_fIOOTHoNEeifB_MoQ_Nmdg" source="_fIOOdnoNEeifB_MoQ_Nmdg" target="_fIOOfXoNEeifB_MoQ_Nmdg" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_fIO1InoNEeifB_MoQ_Nmdg" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_fIO1I3oNEeifB_MoQ_Nmdg" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_fIO1JHoNEeifB_MoQ_Nmdg" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fIO1JXoNEeifB_MoQ_Nmdg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_fIO1JnoNEeifB_MoQ_Nmdg" type="4001" element="_fIOOT3oNEeifB_MoQ_Nmdg" source="_fIOOfXoNEeifB_MoQ_Nmdg" target="_fIOOgHoNEeifB_MoQ_Nmdg" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_fIO1J3oNEeifB_MoQ_Nmdg" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_fIO1KHoNEeifB_MoQ_Nmdg" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_fIO1KXoNEeifB_MoQ_Nmdg" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fIO1KnoNEeifB_MoQ_Nmdg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_fIO1K3oNEeifB_MoQ_Nmdg" type="4001" element="_fIOOUnoNEeifB_MoQ_Nmdg" source="_fIOOgHoNEeifB_MoQ_Nmdg" target="_fIOOg3oNEeifB_MoQ_Nmdg" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_fIO1LHoNEeifB_MoQ_Nmdg" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_fIO1LXoNEeifB_MoQ_Nmdg" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_fIO1LnoNEeifB_MoQ_Nmdg" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fIO1L3oNEeifB_MoQ_Nmdg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>
