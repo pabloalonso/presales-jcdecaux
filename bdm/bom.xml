@@ -10,7 +10,7 @@
                 <field type="STRING" length="255" name="piloteBE" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="cdp" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="responsableSC" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Configuration" fetchType="LAZY" name="configuration" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Configuration" fetchType="EAGER" name="configuration" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -20,8 +20,8 @@
             <fields>
                 <field type="INTEGER" length="255" name="quantite" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="code" nullable="true" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.company.model.SousEnsemble" fetchType="LAZY" name="sousensemble" nullable="true" collection="true"/>
-                <relationField type="COMPOSITION" reference="com.company.model.Budget" fetchType="LAZY" name="budget" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.SousEnsemble" fetchType="EAGER" name="sousensemble" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Budget" fetchType="EAGER" name="budget" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -30,7 +30,7 @@
         <businessObject qualifiedName="com.company.model.Budget">
             <fields>
                 <field type="STRING" length="255" name="type" nullable="true" collection="false"/>
-                <field type="LONG" length="255" name="montant" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="montant" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="version" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>

@@ -1,0 +1,1636 @@
+{
+  "designerVersion" : "1.7.49",
+  "id" : "demandeProjectBase",
+  "name" : "demandeProjectBase",
+  "lastUpdate" : 1530113396095,
+  "rows" : [ [ {
+    "type" : "formContainer",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : { },
+    "reference" : "f7ba5aa0-b69c-4421-9540-e5a1718fe2fa",
+    "id" : "pbFormContainer",
+    "container" : {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : { },
+      "reference" : "93913133-59c0-4278-be27-97e8a3b4abbb",
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "component",
+        "dimension" : {
+          "md" : 12,
+          "sm" : 12,
+          "xs" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 4"
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbTitle"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation"
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Projet Input"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          }
+        },
+        "reference" : "8744d831-c4b4-428f-9e60-004dbe5aaf25",
+        "id" : "pbTitle"
+      } ], [ {
+        "type" : "container",
+        "dimension" : {
+          "md" : 12,
+          "sm" : 12,
+          "xs" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "repeatedCollection" : {
+            "type" : "variable"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "widgetId" : {
+            "type" : "constant"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.WidgetContainer"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          }
+        },
+        "reference" : "b278254f-baf5-44a6-bfc5-f7bb14e488a5",
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "component",
+          "dimension" : {
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbInput"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 1
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Codification"
+            },
+            "type" : {
+              "type" : "constant",
+              "value" : "text"
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "placeholder" : {
+              "type" : "constant"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.projetInput.codification"
+            }
+          },
+          "reference" : "28c059cb-0f67-4500-a344-d9a944bbb9f7",
+          "id" : "pbInput"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbInput"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 1
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Nom Projet"
+            },
+            "type" : {
+              "type" : "constant",
+              "value" : "text"
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "placeholder" : {
+              "type" : "constant"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.projetInput.nomProjet"
+            }
+          },
+          "reference" : "d88ba7dc-dddb-464d-ad79-7db4ef6c12e3",
+          "id" : "pbInput"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "dateFormat" : {
+              "type" : "constant",
+              "value" : "MM/dd/yyyy"
+            },
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbDatePicker"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 1
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Date Debut"
+            },
+            "type" : {
+              "type" : "constant"
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "todayLabel" : {
+              "type" : "constant",
+              "value" : "Today"
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "showToday" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "placeholder" : {
+              "type" : "constant",
+              "value" : "Enter a date (mm/dd/yyyy)"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.DatePickerWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.projetInput.dateDebut"
+            }
+          },
+          "reference" : "8542fd92-8994-4abf-b3a9-16a048f7bf71",
+          "id" : "pbDatePicker"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbInput"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 1
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Demandeur"
+            },
+            "type" : {
+              "type" : "constant",
+              "value" : "text"
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "placeholder" : {
+              "type" : "constant"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.projetInput.demandeur"
+            }
+          },
+          "reference" : "03c38b04-4f5a-4b2e-bc67-e27056ad2574",
+          "id" : "pbInput"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbInput"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 1
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Pilote BE"
+            },
+            "type" : {
+              "type" : "constant",
+              "value" : "text"
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "placeholder" : {
+              "type" : "constant"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.projetInput.piloteBE"
+            }
+          },
+          "reference" : "2ff9dfd1-cc0c-431d-858f-de094c624020",
+          "id" : "pbInput"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbInput"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 1
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Cdp"
+            },
+            "type" : {
+              "type" : "constant",
+              "value" : "text"
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "placeholder" : {
+              "type" : "constant"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.projetInput.cdp"
+            }
+          },
+          "reference" : "b6b79b68-ffa2-40e8-9ce5-e1d71804c62c",
+          "id" : "pbInput"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbInput"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 1
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Responsable SC"
+            },
+            "type" : {
+              "type" : "constant",
+              "value" : "text"
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "placeholder" : {
+              "type" : "constant"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.projetInput.responsableSC"
+            }
+          },
+          "reference" : "63bebfcb-9c6f-489a-913b-d0627846600c",
+          "id" : "pbInput"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 4"
+            },
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbTitle"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "label" : {
+              "type" : "interpolation"
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : "Configuration"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            }
+          },
+          "reference" : "1caf4040-a1e8-48bf-9757-3ecc57493e99",
+          "id" : "pbTitle"
+        } ], [ {
+          "type" : "container",
+          "dimension" : {
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "repeatedCollection" : {
+              "type" : "variable",
+              "value" : "formInput.projetInput.configuration"
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "label" : {
+              "type" : "interpolation"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.WidgetContainer"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            }
+          },
+          "reference" : "57fc22e9-f736-49fe-bd7c-447a026312f5",
+          "id" : "pbContainer",
+          "rows" : [ [ {
+            "type" : "component",
+            "dimension" : {
+              "md" : 12,
+              "sm" : 12,
+              "xs" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "widgetId" : {
+                "type" : "constant",
+                "value" : "pbInput"
+              },
+              "isDisplayed" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 1
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Quantite"
+              },
+              "type" : {
+                "type" : "constant",
+                "value" : "number"
+              },
+              "required" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "readonly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "placeholder" : {
+                "type" : "constant"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "left"
+              },
+              "class" : {
+                "type" : "constant",
+                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+              },
+              "dimension" : {
+                "type" : "constant",
+                "value" : 12
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : "$item.quantite"
+              }
+            },
+            "reference" : "4af96c58-1387-483a-a690-b61c736a3fba",
+            "id" : "pbInput"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "md" : 12,
+              "sm" : 12,
+              "xs" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "widgetId" : {
+                "type" : "constant",
+                "value" : "pbInput"
+              },
+              "isDisplayed" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 1
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Code"
+              },
+              "type" : {
+                "type" : "constant",
+                "value" : "text"
+              },
+              "required" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "readonly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "placeholder" : {
+                "type" : "constant"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "left"
+              },
+              "class" : {
+                "type" : "constant",
+                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+              },
+              "dimension" : {
+                "type" : "constant",
+                "value" : 12
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : "$item.code"
+              }
+            },
+            "reference" : "e2100fbe-7158-49ed-abc7-dcb8f9603e0b",
+            "id" : "pbInput"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "md" : 12,
+              "sm" : 12,
+              "xs" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "readonly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "level" : {
+                "type" : "constant",
+                "value" : "Level 4"
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "widgetId" : {
+                "type" : "constant",
+                "value" : "pbTitle"
+              },
+              "isDisplayed" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "label" : {
+                "type" : "interpolation"
+              },
+              "text" : {
+                "type" : "interpolation",
+                "value" : "Sousensemble"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "left"
+              },
+              "class" : {
+                "type" : "constant",
+                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
+              },
+              "dimension" : {
+                "type" : "constant",
+                "value" : 12
+              }
+            },
+            "reference" : "ceb79075-2a72-4202-9f54-37a4f8d9f0d2",
+            "id" : "pbTitle"
+          } ], [ {
+            "type" : "container",
+            "dimension" : {
+              "md" : 12,
+              "sm" : 12,
+              "xs" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "repeatedCollection" : {
+                "type" : "variable",
+                "value" : "$item.sousensemble"
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "readonly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "widgetId" : {
+                "type" : "constant"
+              },
+              "isDisplayed" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "label" : {
+                "type" : "interpolation"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "left"
+              },
+              "class" : {
+                "type" : "constant",
+                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.WidgetContainer"
+              },
+              "dimension" : {
+                "type" : "constant",
+                "value" : 12
+              }
+            },
+            "reference" : "1272e940-824b-40a4-b9bf-c7b035b5822d",
+            "id" : "pbContainer",
+            "rows" : [ [ {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "widgetId" : {
+                  "type" : "constant",
+                  "value" : "pbInput"
+                },
+                "isDisplayed" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 1
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Etude"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readonly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "placeholder" : {
+                  "type" : "constant"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "class" : {
+                  "type" : "constant",
+                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "$item.etude"
+                }
+              },
+              "reference" : "05e6d323-2e23-433b-90db-c2d36f9f23eb",
+              "id" : "pbInput"
+            } ], [ {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "widgetId" : {
+                  "type" : "constant",
+                  "value" : "pbInput"
+                },
+                "isDisplayed" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 1
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Codification"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readonly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "placeholder" : {
+                  "type" : "constant"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "class" : {
+                  "type" : "constant",
+                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "$item.codification"
+                }
+              },
+              "reference" : "3384a275-f2ac-481c-b7ec-64de83276e1a",
+              "id" : "pbInput"
+            } ], [ {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "widgetId" : {
+                  "type" : "constant",
+                  "value" : "pbInput"
+                },
+                "isDisplayed" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 1
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Sourcing"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readonly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "placeholder" : {
+                  "type" : "constant"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "class" : {
+                  "type" : "constant",
+                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "$item.sourcing"
+                }
+              },
+              "reference" : "b2f434cd-47e3-4746-881d-5a365116885e",
+              "id" : "pbInput"
+            } ], [ {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "removeItem" : {
+                  "type" : "variable",
+                  "value" : "$item"
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "widgetId" : {
+                  "type" : "constant",
+                  "value" : "pbButton"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "danger"
+                },
+                "isDisplayed" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Remove"
+                },
+                "dataToSend" : {
+                  "type" : "expression"
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readonly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "collectionPosition" : {
+                  "type" : "constant",
+                  "value" : "Item"
+                },
+                "targetUrlOnSuccess" : {
+                  "type" : "interpolation"
+                },
+                "action" : {
+                  "type" : "constant",
+                  "value" : "Remove from collection"
+                },
+                "collectionToModify" : {
+                  "type" : "variable",
+                  "value" : "$collection"
+                },
+                "valueToAdd" : {
+                  "type" : "expression"
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "right"
+                },
+                "class" : {
+                  "type" : "constant",
+                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "d854f328-f776-418d-8676-2d38f786c534",
+              "id" : "pbButton"
+            } ] ]
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "md" : 12,
+              "sm" : 12,
+              "xs" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "removeItem" : {
+                "type" : "variable"
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "widgetId" : {
+                "type" : "constant",
+                "value" : "pbButton"
+              },
+              "buttonStyle" : {
+                "type" : "constant",
+                "value" : "success"
+              },
+              "isDisplayed" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Add"
+              },
+              "dataToSend" : {
+                "type" : "expression"
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "readonly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "collectionPosition" : {
+                "type" : "constant"
+              },
+              "targetUrlOnSuccess" : {
+                "type" : "interpolation"
+              },
+              "action" : {
+                "type" : "constant",
+                "value" : "Add to collection"
+              },
+              "collectionToModify" : {
+                "type" : "variable",
+                "value" : "$item.sousensemble"
+              },
+              "valueToAdd" : {
+                "type" : "expression",
+                "value" : "{\r\n  \"etude\" : \"\",\r\n  \"codification\" : \"\",\r\n  \"sourcing\" : \"\"\r\n}"
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "right"
+              },
+              "class" : {
+                "type" : "constant",
+                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+              },
+              "dimension" : {
+                "type" : "constant",
+                "value" : 12
+              }
+            },
+            "reference" : "3bd1e04b-b27b-4ce5-905b-1c1135fe8dbe",
+            "id" : "pbButton"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "md" : 12,
+              "sm" : 12,
+              "xs" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "removeItem" : {
+                "type" : "variable",
+                "value" : "$item"
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "widgetId" : {
+                "type" : "constant",
+                "value" : "pbButton"
+              },
+              "buttonStyle" : {
+                "type" : "constant",
+                "value" : "danger"
+              },
+              "isDisplayed" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Remove"
+              },
+              "dataToSend" : {
+                "type" : "expression"
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "readonly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "collectionPosition" : {
+                "type" : "constant",
+                "value" : "Item"
+              },
+              "targetUrlOnSuccess" : {
+                "type" : "interpolation"
+              },
+              "action" : {
+                "type" : "constant",
+                "value" : "Remove from collection"
+              },
+              "collectionToModify" : {
+                "type" : "variable",
+                "value" : "$collection"
+              },
+              "valueToAdd" : {
+                "type" : "expression"
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "right"
+              },
+              "class" : {
+                "type" : "constant",
+                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+              },
+              "dimension" : {
+                "type" : "constant",
+                "value" : 12
+              }
+            },
+            "reference" : "b0b81862-9f85-4392-8d66-64519a17c1ff",
+            "id" : "pbButton"
+          } ] ]
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "removeItem" : {
+              "type" : "variable"
+            },
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbButton"
+            },
+            "buttonStyle" : {
+              "type" : "constant",
+              "value" : "success"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Add"
+            },
+            "dataToSend" : {
+              "type" : "expression"
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "collectionPosition" : {
+              "type" : "constant"
+            },
+            "targetUrlOnSuccess" : {
+              "type" : "interpolation"
+            },
+            "action" : {
+              "type" : "constant",
+              "value" : "Add to collection"
+            },
+            "collectionToModify" : {
+              "type" : "variable",
+              "value" : "formInput.projetInput.configuration"
+            },
+            "valueToAdd" : {
+              "type" : "expression",
+              "value" : "{\r\n  \"quantite\" : 0,\r\n  \"code\" : \"\",\r\n  \"sousensemble\" : [ ]\r\n}"
+            },
+            "disabled" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "right"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            }
+          },
+          "reference" : "6c825539-1ba0-431f-8148-fec400746995",
+          "id" : "pbButton"
+        } ] ]
+      } ], [ {
+        "type" : "component",
+        "dimension" : {
+          "md" : 12,
+          "sm" : 12,
+          "xs" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "removeItem" : {
+            "type" : "variable"
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbButton"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "primary"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Submit"
+          },
+          "dataToSend" : {
+            "type" : "expression",
+            "value" : "formOutput"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "collectionPosition" : {
+            "type" : "constant"
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation",
+            "value" : "/bonita"
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Start process"
+          },
+          "collectionToModify" : {
+            "type" : "variable"
+          },
+          "valueToAdd" : {
+            "type" : "expression"
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "$form.$invalid"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          }
+        },
+        "reference" : "eda5e9de-0456-47f2-a9b7-96ea5558fea6",
+        "id" : "pbButton"
+      } ] ]
+    }
+  } ] ],
+  "assets" : [ {
+    "id" : "b80c2b5a-b4a3-4c60-9185-e4f2b85d7926",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "5d824e7d-7a79-48c9-af56-a4e1e250679e",
+    "name" : "localization.json",
+    "type" : "json",
+    "order" : 0,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "formInput" : {
+      "type" : "json",
+      "value" : "{\r\n  \"projetInput\" : {\r\n    \"codification\" : \"\",\r\n    \"nomProjet\" : \"\",\r\n    \"dateDebut\" : null,\r\n    \"demandeur\" : \"\",\r\n    \"piloteBE\" : \"\",\r\n    \"cdp\" : \"\",\r\n    \"responsableSC\" : \"\",\r\n    \"configuration\" : [ ]\r\n  }\r\n}",
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : "return {\n\t'projetInput': $data.formInput.projetInput\n};",
+      "exposed" : false
+    }
+  },
+  "uuid" : "789c1551-2206-4259-9518-637a26aca53c",
+  "type" : "form"
+}
