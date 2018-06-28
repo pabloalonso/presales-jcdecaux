@@ -2,7 +2,7 @@
   "designerVersion" : "1.7.49",
   "id" : "configuration",
   "name" : "configuration",
-  "lastUpdate" : 1530114603714,
+  "lastUpdate" : 1530174359622,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -378,7 +378,7 @@
         },
         "disabled" : {
           "type" : "expression",
-          "value" : "options.add.desactive"
+          "value" : "options.sousensemble.add.desactive"
         },
         "alignment" : {
           "type" : "constant",
@@ -394,7 +394,7 @@
         },
         "hidden" : {
           "type" : "expression",
-          "value" : "options.add.cache"
+          "value" : "options.sousensemble.add.cache"
         },
         "url" : {
           "type" : "interpolation"
@@ -603,8 +603,8 @@
           "value" : "{\r\n  \"type\" : \"\",\r\n  \"montant\" : 0,\r\n  \"version\" : \"\"\r\n}"
         },
         "disabled" : {
-          "type" : "constant",
-          "value" : false
+          "type" : "expression",
+          "value" : "options.budget.add.desactive"
         },
         "alignment" : {
           "type" : "constant",
@@ -619,8 +619,8 @@
           "value" : 12
         },
         "hidden" : {
-          "type" : "constant",
-          "value" : false
+          "type" : "expression",
+          "value" : "options.budget.add.cache"
         },
         "url" : {
           "type" : "interpolation"

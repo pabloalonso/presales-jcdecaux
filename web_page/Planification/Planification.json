@@ -1,0 +1,652 @@
+{
+  "designerVersion" : "1.7.49",
+  "id" : "Planification",
+  "name" : "Planification",
+  "lastUpdate" : 1530178272476,
+  "rows" : [ [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : { },
+    "reference" : "d0ae09f2-6eb2-47b2-af0e-451cd0cb771c",
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "md" : 12,
+        "sm" : 12,
+        "xs" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "readonly" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "level" : {
+          "type" : "constant",
+          "value" : "Level 1"
+        },
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "widgetId" : {
+          "type" : "constant",
+          "value" : "pbTitle"
+        },
+        "isDisplayed" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "label" : {
+          "type" : "interpolation"
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "{{ task.displayName }}"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "center"
+        },
+        "class" : {
+          "type" : "constant",
+          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
+        },
+        "dimension" : {
+          "type" : "constant",
+          "value" : 12
+        }
+      },
+      "reference" : "119427b2-0214-4f6c-8ff0-65904ff9a501",
+      "id" : "pbTitle"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "md" : 12,
+        "sm" : 12,
+        "xs" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "readonly" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "widgetId" : {
+          "type" : "constant",
+          "value" : "pbText"
+        },
+        "isDisplayed" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "label" : {
+          "type" : "interpolation"
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "{{ task.displayDescription }}"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "class" : {
+          "type" : "constant",
+          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TextWidget"
+        },
+        "dimension" : {
+          "type" : "constant",
+          "value" : 12
+        }
+      },
+      "reference" : "18b87a26-8363-421b-a1cc-a0a88868abfd",
+      "id" : "pbText"
+    } ] ]
+  } ], [ {
+    "type" : "formContainer",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
+    "reference" : "0e749912-a41f-469d-b354-c96766ff4d13",
+    "id" : "pbFormContainer",
+    "container" : {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : { },
+      "reference" : "3f599f76-fde4-4ee8-a16c-7d7d23515abe",
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "cb1fe878-1117-4bf9-aad7-64e6afe38642",
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12,
+            "sm" : 12,
+            "md" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "disabled" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Etude Detaille"
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.planification.etude.active"
+            }
+          },
+          "reference" : "85620539-1dea-481f-9f8c-ae10df830452",
+          "id" : "pbCheckbox"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12,
+            "sm" : 12,
+            "md" : 12,
+            "lg" : 6
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "disabled" : {
+              "type" : "expression",
+              "value" : "!formInput.planification.etude.active"
+            },
+            "required" : {
+              "type" : "expression",
+              "value" : "formInput.planification.etude.active"
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Définir qui exécutera cette tâche"
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 4
+            },
+            "placeholder" : {
+              "type" : "interpolation",
+              "value" : "Sélectionnez un utilisateur"
+            },
+            "availableValues" : {
+              "type" : "expression",
+              "value" : "users"
+            },
+            "displayedKey" : {
+              "type" : "constant",
+              "value" : "firstname + \" \" +  lastname"
+            },
+            "returnedKey" : {
+              "type" : "constant",
+              "value" : "id"
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.planification.etude.user"
+            }
+          },
+          "reference" : "4b8c2d13-9e37-484d-9c76-60922cc59e87",
+          "id" : "pbSelect"
+        } ] ]
+      }, {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "59115f07-f540-43e0-906e-9d9a1446c883",
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12,
+            "sm" : 12,
+            "md" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "disabled" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Codification"
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.planification.codification.active"
+            }
+          },
+          "reference" : "beeeac2f-4b03-4a39-9548-8bd14521db01",
+          "id" : "pbCheckbox"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12,
+            "sm" : 12,
+            "md" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "disabled" : {
+              "type" : "expression",
+              "value" : "!formInput.planification.codification.active"
+            },
+            "required" : {
+              "type" : "expression",
+              "value" : "formInput.planification.codification.active"
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Définir qui exécutera cette tâche"
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 4
+            },
+            "placeholder" : {
+              "type" : "interpolation",
+              "value" : "Sélectionnez un utilisateur"
+            },
+            "availableValues" : {
+              "type" : "expression",
+              "value" : "users"
+            },
+            "displayedKey" : {
+              "type" : "constant",
+              "value" : "firstname + \" \" +  lastname"
+            },
+            "returnedKey" : {
+              "type" : "constant",
+              "value" : "id"
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.planification.codification.user"
+            }
+          },
+          "reference" : "dd7c9847-f9f6-42b6-be80-41df23a90937",
+          "id" : "pbSelect"
+        } ] ]
+      }, {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "a627d878-f55c-432a-a38a-c6c087c99990",
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12,
+            "sm" : 12,
+            "md" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "disabled" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Sourcing"
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.planification.sourcing.active"
+            }
+          },
+          "reference" : "27a76142-17b0-4406-b916-fb38c7b4d8cb",
+          "id" : "pbCheckbox"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12,
+            "sm" : 12,
+            "md" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "disabled" : {
+              "type" : "expression",
+              "value" : "!formInput.planification.sourcing.active"
+            },
+            "required" : {
+              "type" : "expression",
+              "value" : "formInput.planification.sourcing.active"
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Définir qui exécutera cette tâche"
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 4
+            },
+            "placeholder" : {
+              "type" : "interpolation",
+              "value" : "Sélectionnez un utilisateur"
+            },
+            "availableValues" : {
+              "type" : "expression",
+              "value" : "users"
+            },
+            "displayedKey" : {
+              "type" : "constant",
+              "value" : "firstname + \" \" +  lastname"
+            },
+            "returnedKey" : {
+              "type" : "constant",
+              "value" : "id"
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "formInput.planification.sourcing.user"
+            }
+          },
+          "reference" : "f0bccbfa-890f-4426-8629-803dfe3dcd68",
+          "id" : "pbSelect"
+        } ] ]
+      } ], [ {
+        "type" : "component",
+        "dimension" : {
+          "md" : 12,
+          "sm" : 12,
+          "xs" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "removeItem" : {
+            "type" : "variable"
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbButton"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "primary"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Submit"
+          },
+          "dataToSend" : {
+            "type" : "expression",
+            "value" : "formOutput"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "collectionPosition" : {
+            "type" : "constant"
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation",
+            "value" : "/bonita"
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Submit task"
+          },
+          "collectionToModify" : {
+            "type" : "variable"
+          },
+          "valueToAdd" : {
+            "type" : "expression"
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "$form.$invalid"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          }
+        },
+        "reference" : "fe09fa39-1313-4231-9d03-6075ce7d0f87",
+        "id" : "pbButton"
+      } ] ]
+    }
+  } ] ],
+  "assets" : [ {
+    "id" : "c72bc838-6e22-40ca-a7ea-c66bceb7395e",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "b5e9911a-988a-47ef-94d0-9f4713f4071c",
+    "name" : "localization.json",
+    "type" : "json",
+    "order" : 0,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "task" : {
+      "type" : "url",
+      "value" : "../API/bpm/userTask/{{taskId}}",
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : "{\r\n  \"planification\" : { \"etude\":{\"active\":true}}\r\n}",
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : "\nvar output = {};\n\nvar plan =  $data.formInput.planification;\n\nif(plan.etude.active)\n    output.etude_detaillee = plan.etude.user;\n    \nif(plan.codification.active)\n    output.codification = plan.codification.user;\n    \nif(plan.sourcing.active)\n    output.sourcing = plan.sourcing.user;    \n\n\nreturn {\"planification\":output}",
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : "../API/bpm/userTask/{{taskId}}/context",
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : "id",
+      "exposed" : false
+    },
+    "users" : {
+      "type" : "url",
+      "value" : "../API/identity/user?c=100&p=0",
+      "exposed" : false
+    }
+  },
+  "uuid" : "6a9afbbb-32e9-451c-9cc8-0373ea74e2e1",
+  "type" : "form"
+}

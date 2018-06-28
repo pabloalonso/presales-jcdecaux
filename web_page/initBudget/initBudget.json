@@ -2,7 +2,7 @@
   "designerVersion" : "1.7.49",
   "id" : "initBudget",
   "name" : "initBudget",
-  "lastUpdate" : 1530113759482,
+  "lastUpdate" : 1530174604047,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -215,7 +215,7 @@
         "id" : "projet",
         "binding" : {
           "projetInput" : "projetInput",
-          "options" : ""
+          "options" : "options.projetInput"
         }
       } ], [ {
         "type" : "component",
@@ -297,38 +297,6 @@
         },
         "reference" : "efaf6d2e-e1be-4055-a904-7861fffe1c71",
         "id" : "pbButton"
-      } ], [ {
-        "type" : "component",
-        "dimension" : {
-          "xs" : 12,
-          "sm" : 12,
-          "md" : 12,
-          "lg" : 12
-        },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "allowHTML" : {
-            "type" : "constant",
-            "value" : true
-          },
-          "text" : {
-            "type" : "interpolation",
-            "value" : "{{context|json}}"
-          },
-          "alignment" : {
-            "type" : "constant",
-            "value" : "left"
-          }
-        },
-        "reference" : "f1a16891-13ef-4e19-870c-0157cb15203b",
-        "id" : "pbText"
       } ] ]
     }
   } ] ],
@@ -370,6 +338,11 @@
     "projetInput" : {
       "type" : "url",
       "value" : "../{{context.monProjet_ref.link}}",
+      "exposed" : false
+    },
+    "options" : {
+      "type" : "json",
+      "value" : "{\"projetInput\":{\"cache\":false,\r\n\t\"codification\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\"nomProjet\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\"dateDebut\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\"demandeur\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\"responsableSC\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\"piloteBE\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\"cdp\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\"configuration\":{\"cache\":false,\r\n\t\t\"quantite\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\t\"code\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\t\"add\":{\"cache\":true,\"lectureSeule\":false},\r\n\t\t\"remove\":{\"cache\":true,\"lectureSeule\":false},\r\n\t\t\"sousensemble\":{\"cache\":false,\r\n\t\t\t\"etude\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\t\t\"codification\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\t\t\"sourcing\":{\"cache\":false,\"obligatoire\":false,\"lectureSeule\":true},\r\n\t\t\t\"add\":{\"cache\":true,\"lectureSeule\":false},\r\n\t\t\t\"remove\":{\"cache\":true,\"lectureSeule\":false}\r\n\t\t},\r\n\t\t\"budget\":{\"cache\":false,\r\n\t\t\t\"type\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\t\"montant\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\t\"version\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\t\"add\":{\"cache\":false,\"lectureSeule\":false},\r\n\t\t\t\"remove\":{\"cache\":true,\"lectureSeule\":false}\r\n\t\t}\r\n\t}\r\n}\r\n}\r\n\r\n",
       "exposed" : false
     }
   },

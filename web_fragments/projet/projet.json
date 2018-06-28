@@ -2,7 +2,7 @@
   "designerVersion" : "1.7.49",
   "id" : "projet",
   "name" : "projet",
-  "lastUpdate" : 1530114658787,
+  "lastUpdate" : 1530174433423,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -37,8 +37,8 @@
         "value" : "text"
       },
       "required" : {
-        "type" : "constant",
-        "value" : true
+        "type" : "expression",
+        "value" : "options.codification.obligatoire"
       },
       "labelHidden" : {
         "type" : "constant",
@@ -72,8 +72,8 @@
         "value" : "projetInput.codification"
       },
       "hidden" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.codification.cache"
       },
       "minLength" : {
         "type" : "constant",
@@ -84,8 +84,8 @@
         "value" : ""
       },
       "readOnly" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.codification.lectureSeule"
       },
       "min" : {
         "type" : "constant"
@@ -134,8 +134,8 @@
         "value" : "text"
       },
       "required" : {
-        "type" : "constant",
-        "value" : true
+        "type" : "expression",
+        "value" : "options.nomProjet.obligatoire"
       },
       "labelHidden" : {
         "type" : "constant",
@@ -169,8 +169,8 @@
         "value" : "projetInput.nomProjet"
       },
       "hidden" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.nomProjet.cache"
       },
       "minLength" : {
         "type" : "constant",
@@ -181,8 +181,8 @@
         "value" : ""
       },
       "readOnly" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.nomProjet.lectureSeule"
       },
       "min" : {
         "type" : "constant"
@@ -234,8 +234,8 @@
         "type" : "constant"
       },
       "required" : {
-        "type" : "constant",
-        "value" : true
+        "type" : "expression",
+        "value" : "options.dateDebut.obligatoire"
       },
       "todayLabel" : {
         "type" : "constant",
@@ -278,12 +278,12 @@
         "value" : "projetInput.dateDebut"
       },
       "hidden" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.dateDebut.cache"
       },
       "readOnly" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.dateDebut.lectureSeule"
       }
     },
     "reference" : "9346c000-fc7b-444b-ba3f-11b00d3b8b27",
@@ -322,8 +322,8 @@
         "value" : "text"
       },
       "required" : {
-        "type" : "constant",
-        "value" : true
+        "type" : "expression",
+        "value" : "options.demandeur.obligatoire"
       },
       "labelHidden" : {
         "type" : "constant",
@@ -357,8 +357,8 @@
         "value" : "projetInput.demandeur"
       },
       "hidden" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.demandeur.cache"
       },
       "minLength" : {
         "type" : "constant",
@@ -369,8 +369,8 @@
         "value" : ""
       },
       "readOnly" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.demandeur.lectureSeule"
       },
       "min" : {
         "type" : "constant"
@@ -419,8 +419,8 @@
         "value" : "text"
       },
       "required" : {
-        "type" : "constant",
-        "value" : true
+        "type" : "expression",
+        "value" : "options.responsableSC.obligatoire"
       },
       "labelHidden" : {
         "type" : "constant",
@@ -454,8 +454,8 @@
         "value" : "projetInput.responsableSC"
       },
       "hidden" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.responsableSC.cache"
       },
       "minLength" : {
         "type" : "constant",
@@ -466,8 +466,8 @@
         "value" : ""
       },
       "readOnly" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.responsableSC.lectureSeule"
       },
       "min" : {
         "type" : "constant"
@@ -516,8 +516,8 @@
         "value" : "text"
       },
       "required" : {
-        "type" : "constant",
-        "value" : true
+        "type" : "expression",
+        "value" : "options.piloteBE.obligatoire"
       },
       "labelHidden" : {
         "type" : "constant",
@@ -551,8 +551,8 @@
         "value" : "projetInput.piloteBE"
       },
       "hidden" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.piloteBE.cache"
       },
       "minLength" : {
         "type" : "constant",
@@ -563,8 +563,8 @@
         "value" : ""
       },
       "readOnly" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.piloteBE.lectureSeule"
       },
       "min" : {
         "type" : "constant"
@@ -613,8 +613,8 @@
         "value" : "text"
       },
       "required" : {
-        "type" : "constant",
-        "value" : true
+        "type" : "expression",
+        "value" : "options.cdp.obligatoire"
       },
       "labelHidden" : {
         "type" : "constant",
@@ -648,8 +648,8 @@
         "value" : "projetInput.cdp"
       },
       "hidden" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.cdp.cache"
       },
       "minLength" : {
         "type" : "constant",
@@ -660,8 +660,8 @@
         "value" : ""
       },
       "readOnly" : {
-        "type" : "constant",
-        "value" : false
+        "type" : "expression",
+        "value" : "options.cdp.lectureSeule"
       },
       "min" : {
         "type" : "constant"
@@ -763,7 +763,7 @@
         },
         "disabled" : {
           "type" : "expression",
-          "value" : "options.add.desactive"
+          "value" : "options.configuration.add.desactive"
         },
         "alignment" : {
           "type" : "constant",
@@ -779,7 +779,7 @@
         },
         "hidden" : {
           "type" : "expression",
-          "value" : "options.add.cache"
+          "value" : "options.configuration.add.cache"
         },
         "url" : {
           "type" : "interpolation"

@@ -2,7 +2,7 @@
   "designerVersion" : "1.7.49",
   "id" : "demandeProjet",
   "name" : "demandeProjet",
-  "lastUpdate" : 1530112912827,
+  "lastUpdate" : 1530178340023,
   "rows" : [ [ {
     "type" : "formContainer",
     "dimension" : {
@@ -202,7 +202,7 @@
   "data" : {
     "formInput" : {
       "type" : "json",
-      "value" : "{\r\n  \"projetInput\" : {\r\n    \"codification\" : \"asd\",\r\n    \"nomProjet\" : \"\",\r\n    \"dateDebut\" : null,\r\n    \"demandeur\" : \"\",\r\n    \"piloteBE\" : \"\",\r\n    \"cdp\" : \"\",\r\n    \"responsableSC\" : \"\",\r\n    \"configuration\" : [{} ]\r\n  }\r\n}",
+      "value" : "{\r\n  \"projetInput\" : {\r\n    \"codification\" : \"\",\r\n    \"nomProjet\" : \"\",\r\n    \"dateDebut\" : null,\r\n    \"demandeur\" : \"\",\r\n    \"piloteBE\" : \"\",\r\n    \"cdp\" : \"\",\r\n    \"responsableSC\" : \"\",\r\n    \"configuration\" : [{\"sousensemble\":[{}]} ]\r\n  }\r\n}",
       "exposed" : false
     },
     "formOutput" : {
@@ -212,7 +212,7 @@
     },
     "options" : {
       "type" : "json",
-      "value" : "{ \"projetInput\" : {\r\n    \"codification\" : \"asd\",\r\n    \"nomProjet\" : \"\",\r\n    \"dateDebut\" : null,\r\n    \"demandeur\" : \"\",\r\n    \"piloteBE\" : \"\",\r\n    \"cdp\" : \"\",\r\n    \"responsableSC\" : \"\",\r\n    \"configuration\" : \r\n        {\"budget\":\r\n            {\"type\":\r\n                {\"cache\":false,\r\n                \"obligatoire\":true,\r\n                \"lectureSeule\":true }\r\n                \r\n            } \r\n        }\r\n    \r\n  }}",
+      "value" : "{\"projetInput\":{\"cache\":false,\r\n\t\"codification\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\"nomProjet\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\"dateDebut\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\"demandeur\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\"responsableSC\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\"piloteBE\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\"cdp\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\"configuration\":{\"cache\":false,\r\n\t\t\"quantite\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\"code\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\"add\":{\"cache\":false,\"lectureSeule\":false},\r\n\t\t\"remove\":{\"cache\":false,\"lectureSeule\":false},\r\n\t\t\"sousensemble\":{\"cache\":false,\r\n\t\t\t\"etude\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\t\"codification\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\t\"sourcing\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\t\"add\":{\"cache\":false,\"lectureSeule\":false},\r\n\t\t\t\"remove\":{\"cache\":false,\"lectureSeule\":false}\r\n\t\t},\r\n\t\t\"budget\":{\"cache\":true,\r\n\t\t\t\"type\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\t\"montant\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\t\"version\":{\"cache\":false,\"obligatoire\":true,\"lectureSeule\":false},\r\n\t\t\t\"add\":{\"cache\":true,\"lectureSeule\":false},\r\n\t\t\t\"remove\":{\"cache\":true,\"lectureSeule\":false}\r\n\t\t}\r\n\t}\r\n}\r\n}",
       "exposed" : false
     }
   },
