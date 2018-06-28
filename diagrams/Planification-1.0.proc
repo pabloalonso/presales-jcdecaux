@@ -22,13 +22,13 @@
           <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_kknlUnoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
           <confirmationMessage xmi:type="expression:Expression" xmi:id="_kknlU3oNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_kknlVHoNEeifB_MoQ_Nmdg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_A4R40Hq2EeiJhsr4_evYCg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_EwGCcHq3EeiJhsr4_evYCg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <filters xmi:type="process:ActorFilter" xmi:id="_2iuPsHq0EeiJhsr4_evYCg" name="Etude Utilisateur" definitionId="single-user" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_2iuPsXq0EeiJhsr4_evYCg" definitionId="single-user" version="1.0.0">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_2iuPsnq0EeiJhsr4_evYCg" key="userId">
-                <expression xmi:type="expression:Expression" xmi:id="_2iuPs3q0EeiJhsr4_evYCg" name="userId()" content="return taches.get(&quot;etude_detaillee&quot;);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:JavaObjectData" xmi:id="_2iuPtHq0EeiJhsr4_evYCg" name="taches" dataType="_kknlgnoNEeifB_MoQ_Nmdg" className="java.util.Map"/>
+          <filters xmi:type="process:ActorFilter" xmi:id="__fY90Hq2EeiJhsr4_evYCg" name="Etude Utilisateur" definitionId="single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="__fY90Xq2EeiJhsr4_evYCg" definitionId="single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="__fY90nq2EeiJhsr4_evYCg" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="__fY903q2EeiJhsr4_evYCg" name="userId()" content="return Long.parseLong(taches.get(&quot;etude_detaillee&quot;).toString());" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:JavaObjectData" xmi:id="__fY91Hq2EeiJhsr4_evYCg" name="taches" dataType="_kknlgnoNEeifB_MoQ_Nmdg" className="java.util.Map"/>
                 </expression>
               </parameters>
             </configuration>
@@ -79,13 +79,13 @@
           <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_RDVsFHoPEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
           <confirmationMessage xmi:type="expression:Expression" xmi:id="_RDVsFXoPEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_RDWTI3oPEeifB_MoQ_Nmdg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_A4R40Xq2EeiJhsr4_evYCg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_EwGCcXq3EeiJhsr4_evYCg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <filters xmi:type="process:ActorFilter" xmi:id="_g3XsoHqrEeiJhsr4_evYCg" name="Codification Utilisateur" definitionId="single-user" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_g3XsoXqrEeiJhsr4_evYCg" definitionId="single-user" version="1.0.0">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g3XsonqrEeiJhsr4_evYCg" key="userId">
-                <expression xmi:type="expression:Expression" xmi:id="_g3Xso3qrEeiJhsr4_evYCg" name="userId()" content="return taches.get(&quot;Codification&quot;);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:JavaObjectData" xmi:id="_g3XspHqrEeiJhsr4_evYCg" name="taches" dataType="_kknlgnoNEeifB_MoQ_Nmdg" className="java.util.Map"/>
+          <filters xmi:type="process:ActorFilter" xmi:id="_B1hHsHq3EeiJhsr4_evYCg" name="Codification Utilisateur" definitionId="single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_B1hHsXq3EeiJhsr4_evYCg" definitionId="single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B1hHsnq3EeiJhsr4_evYCg" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_B1hHs3q3EeiJhsr4_evYCg" name="userId()" content="return Long.parseLong(taches.get(&quot;codification&quot;).toString());" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:JavaObjectData" xmi:id="_B1hHtHq3EeiJhsr4_evYCg" name="taches" dataType="_kknlgnoNEeifB_MoQ_Nmdg" className="java.util.Map"/>
                 </expression>
               </parameters>
             </configuration>
@@ -106,13 +106,13 @@
           <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_SIsKknoPEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
           <confirmationMessage xmi:type="expression:Expression" xmi:id="_SIsKk3oPEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_SIsKmnoPEeifB_MoQ_Nmdg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_A4R40nq2EeiJhsr4_evYCg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_EwGCcnq3EeiJhsr4_evYCg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <filters xmi:type="process:ActorFilter" xmi:id="_k9NgoHqrEeiJhsr4_evYCg" name="Sourcing Utilisateur" definitionId="single-user" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_k9NgoXqrEeiJhsr4_evYCg" definitionId="single-user" version="1.0.0">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_k9NgonqrEeiJhsr4_evYCg" key="userId">
-                <expression xmi:type="expression:Expression" xmi:id="_k9Ngo3qrEeiJhsr4_evYCg" name="userId()" content="return taches.get(&quot;Sourcing&quot;);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:JavaObjectData" xmi:id="_k9NgpHqrEeiJhsr4_evYCg" name="taches" dataType="_kknlgnoNEeifB_MoQ_Nmdg" className="java.util.Map"/>
+          <filters xmi:type="process:ActorFilter" xmi:id="_ECgjsHq3EeiJhsr4_evYCg" name="Sourcing Utilisateur" definitionId="single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_ECgjsXq3EeiJhsr4_evYCg" definitionId="single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ECgjsnq3EeiJhsr4_evYCg" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_ECgjs3q3EeiJhsr4_evYCg" name="userId()" content="return Long.parseLong(taches.get(&quot;sourcing&quot;).toString());" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:JavaObjectData" xmi:id="_ECgjtHq3EeiJhsr4_evYCg" name="taches" dataType="_kknlgnoNEeifB_MoQ_Nmdg" className="java.util.Map"/>
                 </expression>
               </parameters>
             </configuration>
@@ -135,7 +135,7 @@
       <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_kknlYHoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
       <confirmationMessage xmi:type="expression:Expression" xmi:id="_kknlYXoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
       <formMapping xmi:type="process:FormMapping" xmi:id="_kknlYnoNEeifB_MoQ_Nmdg">
-        <targetForm xmi:type="expression:Expression" xmi:id="_A4R403q2EeiJhsr4_evYCg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_EwGCc3q3EeiJhsr4_evYCg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <recapPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_kknlZHoNEeifB_MoQ_Nmdg" name="" content="" returnTypeFixed="true"/>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_kknlZXoNEeifB_MoQ_Nmdg">
@@ -160,8 +160,8 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_n1A_AHoNEeifB_MoQ_Nmdg" target="_nSjLIHoNEeifB_MoQ_Nmdg" source="_mTNOAHoNEeifB_MoQ_Nmdg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_n1BmEHoNEeifB_MoQ_Nmdg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_n1BmEXoNEeifB_MoQ_Nmdg" name="No Codification" content="return taches.get(&quot;Codification&quot;)== null " interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:JavaObjectData" xmi:id="_PREkUHqrEeiJhsr4_evYCg" name="taches" dataType="_kknlgnoNEeifB_MoQ_Nmdg" className="java.util.Map"/>
+        <condition xmi:type="expression:Expression" xmi:id="_n1BmEXoNEeifB_MoQ_Nmdg" name="No Codification" content="return taches.get(&quot;codification&quot;)== null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:JavaObjectData" xmi:id="_WyNkEHq3EeiJhsr4_evYCg" name="taches" dataType="_kknlgnoNEeifB_MoQ_Nmdg" className="java.util.Map"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_rrgvcHoNEeifB_MoQ_Nmdg" target="_r7oPEHoNEeifB_MoQ_Nmdg" source="_nSjLIHoNEeifB_MoQ_Nmdg">
@@ -178,15 +178,15 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_te9DAHoNEeifB_MoQ_Nmdg" target="_tDVeAHoNEeifB_MoQ_Nmdg" source="_r7oPEHoNEeifB_MoQ_Nmdg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_te9DAXoNEeifB_MoQ_Nmdg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_te9DAnoNEeifB_MoQ_Nmdg" name="No Sourcing" content="return taches.get(&quot;Sourcing&quot;)== null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:JavaObjectData" xmi:id="_R7jNkHqrEeiJhsr4_evYCg" name="taches" dataType="_kknlgnoNEeifB_MoQ_Nmdg" className="java.util.Map"/>
+        <condition xmi:type="expression:Expression" xmi:id="_te9DAnoNEeifB_MoQ_Nmdg" name="No Sourcing" content="return taches.get(&quot;sourcing&quot;)== null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:JavaObjectData" xmi:id="_XsnW0Hq3EeiJhsr4_evYCg" name="taches" dataType="_kknlgnoNEeifB_MoQ_Nmdg" className="java.util.Map"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_u4wHgHoNEeifB_MoQ_Nmdg" target="_u4qA4HoNEeifB_MoQ_Nmdg" source="_tDVeAHoNEeifB_MoQ_Nmdg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_u4wukHoNEeifB_MoQ_Nmdg"/>
         <condition xmi:type="expression:Expression" xmi:id="_u4wukXoNEeifB_MoQ_Nmdg" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <actors xmi:type="process:Actor" xmi:id="_kknla3oNEeifB_MoQ_Nmdg" documentation="Ceci est un exemple d'acteur associé à tous les utilisateurs d'ACME" name="Employee actor" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_kknla3oNEeifB_MoQ_Nmdg" documentation="Ceci est un exemple d'acteur associé à tous les utilisateurs d'ACME" name="Employee actor"/>
       <contract xmi:type="process:Contract" xmi:id="_kknlbHoNEeifB_MoQ_Nmdg"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_kknlbXoNEeifB_MoQ_Nmdg">
         <name xmi:type="expression:Expression" xmi:id="_kknlbnoNEeifB_MoQ_Nmdg" content="" returnTypeFixed="true"/>
